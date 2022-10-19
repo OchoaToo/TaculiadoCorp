@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         btn1 = findViewById(R.id.btn1)
 
-        /*MANDO EL LOGIN PRIMERO Para pruebas
+        /*MANDO EL LOGIN PRIMERO Para pruebas para cambiarlo ve al AndroidManifest y cambias el LoginActivyti por MainActivity
         Primero comprobar si ehay una sesion iniciada si no, mandar el activity login
         ~okto
          */

@@ -6,7 +6,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="gris_azulado">#737C8A</color>
+    <color name="gris_Barras">#ebebeb</color>
+    <color name="gris_fuentes">#abb5be</color>
+    <color name="gris">#808080</color>
     <color name="white">#FFFFFFFF</color>
     <color name="verdetaco">#58C1AB</color>
     <color name="AzulFacebook">#3b5998</color>
