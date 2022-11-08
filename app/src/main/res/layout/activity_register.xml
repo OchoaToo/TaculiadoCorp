@@ -9,19 +9,56 @@
 
 
     <TextView
+        android:id="@+id/txtIniciarSesion"
+        android:layout_width="106dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="-13dp"
+        android:clickable="true"
+        android:contextClickable="false"
+        android:gravity="center"
+        android:text="Iniciar Sesion"
+        android:textColor="@color/verdetaco"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/txtvR"
+        app:layout_constraintTop_toTopOf="@+id/txtvR" />
+
+    <Button
+        android:id="@+id/btnCon"
+        android:layout_width="260sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="@color/verdetaco"
+        android:shadowColor="@color/black"
+        android:text="Continuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/txtvR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Ya tienes una cuenta?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/btnCon"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon" />
+
+    <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="Password"
         android:textColor="@color/verdetaco"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/etPassword2"
         app:layout_constraintTop_toBottomOf="@+id/etEmail2" />
 
     <EditText
         android:id="@+id/etPassword2"
-        android:layout_width="280sp"
+        android:layout_width="260sp"
         android:layout_height="50sp"
         android:backgroundTint="@color/gris_Barras"
         android:ems="10"
@@ -40,8 +77,8 @@
         android:layout_marginTop="80dp"
         android:text="Registro"
         android:textColor="@color/black"
-        android:textSize="26sp"
-        app:layout_constraintStart_toStartOf="@+id/textView9"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/etEmail2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -51,13 +88,13 @@
         android:layout_marginTop="40dp"
         android:text="Email"
         android:textColor="@color/verdetaco"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/etEmail2"
         app:layout_constraintTop_toBottomOf="@+id/txtvR1" />
 
     <EditText
         android:id="@+id/etEmail2"
-        android:layout_width="280sp"
+        android:layout_width="260sp"
         android:layout_height="50sp"
         android:backgroundTint="@color/gris_Barras"
         android:ems="10"
@@ -74,11 +111,12 @@
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:buttonTint="@color/verdetaco"
         android:minHeight="48dp"
-        android:text="CheckBox"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="He leído y acepto los términos y\n condiciones de uso"
+        android:textColor="@color/black"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/etPassword2"
         app:layout_constraintTop_toBottomOf="@+id/etPassword2" />
 
