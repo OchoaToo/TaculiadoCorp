@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/ivHotelDetalle"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="28dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumeroReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de Reserva: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/ivHotelDetalle"
+        app:layout_constraintTop_toBottomOf="@id/ivHotelDetalle"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/tvNombreHotelDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hotel:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNumeroReservaDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNumeroReservaDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvEstadoReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado de Reserva:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNombreHotelDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreHotelDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNombreClienteDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvEstadoReservaDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvEstadoReservaDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvTelefonoClienteDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefono:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNombreClienteDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNombreClienteDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvHabitacionDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Habitacion:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvTelefonoClienteDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvTelefonoClienteDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNumeroHabitacionesDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Numero de Habitaciones:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvHabitacionDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvHabitacionDetalle"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvNumeroAdultosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Adultos:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNumeroHabitacionesDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNumeroHabitacionesDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvNumeroMenoresDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Menores:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvNumeroAdultosDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNumeroAdultosDetalle"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvCheckInDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Check In:  "
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvNumeroMenoresDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvNumeroMenoresDetalle" />
+    <TextView
+        android:id="@+id/tvCheckOutDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Check Out:  "
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvCheckInDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckInDetalle" />
+
+    <TextView
+        android:id="@+id/tvComplementosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complementos:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tvCheckOutDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvCheckOutDetalle"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvTotalReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total de Reserva: $"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="@id/tvComplementosDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvComplementosDetalle" />
+
+    <TextView
+        android:id="@+id/tvPagosAplicadosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Pagos Aplicados: $"
+        android:textColor="#4CAF50"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvTotalReservaDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalReservaDetalle" />
+
+    <TextView
+        android:id="@+id/tvMontoFaltante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Monto Pendiente: $"
+        android:textColor="#FF9800"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvPagosAplicadosDetalle"
+        app:layout_constraintTop_toBottomOf="@id/tvPagosAplicadosDetalle" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

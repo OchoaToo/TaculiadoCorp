@@ -20,18 +20,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txtvR3" />
 
     <TextView
-        android:id="@+id/txtvR4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:text="Contacta a tu agente de ventas"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/txtvR3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,16 +32,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="225dp"
-        android:layout_height="230dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tacotriste" />
-
-    <ImageView
         android:id="@+id/imgIniciarSesion"
         android:layout_width="50sp"
         android:layout_height="50sp"
@@ -63,5 +41,16 @@
         app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/iconousuario" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
