@@ -1,0 +1,106 @@
+{
+  "project_info": {
+    "project_number": "874938336035",
+    "firebase_url": "https://tqliaomessaging-default-rtdb.firebaseio.com",
+    "project_id": "tqliaomessaging",
+    "storage_bucket": "tqliaomessaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874938336035:android:3a064d2fe289afe2420296",
+        "android_client_info": {
+          "package_name": "com.example.taculiadocorp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh3BMM2fXEenEDsORaHPLKt9i2V3QVf4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874938336035:android:e6607d3f651934e8420296",
+        "android_client_info": {
+          "package_name": "com.example.mensajesfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh3BMM2fXEenEDsORaHPLKt9i2V3QVf4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874938336035:android:431bf0042860a4ab420296",
+        "android_client_info": {
+          "package_name": "com.example.taculiadocorp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874938336035-e7o522d1p2pk75frb9v1g4k3rf2c5psg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taculiadocorp",
+            "certificate_hash": "0ff6898a44122f1b629a984f94738710e709fb79"
+          }
+        },
+        {
+          "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh3BMM2fXEenEDsORaHPLKt9i2V3QVf4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874938336035-fkchr7vgjc6g6c53jrm9s3gubj1kqjtq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

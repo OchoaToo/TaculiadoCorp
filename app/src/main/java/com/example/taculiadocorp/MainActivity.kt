@@ -10,11 +10,14 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 import com.android.volley.Request
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import org.json.JSONArray
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+    private val auth = Firebase.auth
     val arrayList = ArrayList<Model>()
     val displayList = ArrayList<Model>()
     private lateinit var imgIniciarSesion: ImageView
@@ -22,8 +25,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    imgIniciarSesion = findViewById(R.id.imgIniciarSesion)
-        imgIniciarSesion.setOnClickListener {
+
+        var localemail = intent.getStringExtra("email")
+        println(localemail)
+
+        imgIniciarSesion = findViewById(R.id.imgIniciarSesion)
+        btnLogOut.setOnClickListener{
+            auth.signOut()
             val intentLogin: Intent = Intent(this,LoginActivity::class.java)
             startActivity(intentLogin)
             finish()
@@ -56,9 +64,18 @@ class MainActivity : AppCompatActivity() {
                 var checkout = jsonObject.get("checkout").toString()
                 var estadoreserva = jsonObject.get("estadoreserva").toString()
                 var huespedes = jsonObject.get("huespedes").toString()
-                arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,
-                    numeroHabitaciones,totalAdultos,totalMenores,complementos,totalReserva,pagosAplicados,montoPendiente,
-                    imghotel,checkin,checkout,estadoreserva,huespedes))
+                var usuario = jsonObject.get("usuario").toString()
+
+                if(usuario == localemail){
+                    arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,
+                        numeroHabitaciones,totalAdultos,totalMenores,complementos,totalReserva,pagosAplicados,montoPendiente,
+                        imghotel,checkin,checkout,estadoreserva,huespedes))
+
+                    print(nombreHotel)
+                }
+                println("CLIENTE $nombreCliente")
+                println("EMAIL $localemail")
+
 
             }
             displayList.addAll(arrayList)
