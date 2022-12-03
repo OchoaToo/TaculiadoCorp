@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">TaculiadoCorp</string>
+    <string name= "cerrarsesion">salir</string>
+    <string name= "checkin">Check-In:</string>
+    <string name= "checkout">Check-Out:</string>
+    <string name= "numerodereserva">Reservacion No.</string>
+
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -11,6 +17,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="large_text">
+
         "Material is the metaphor.\n\n"
 
         "A material metaphor is the unifying theory of a rationalized space and a system of motion."

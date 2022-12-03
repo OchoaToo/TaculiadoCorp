@@ -12,4 +12,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verdetaco">#58C1AB</color>
     <color name="AzulFacebook">#3b5998</color>
+    <color name="cyan1">#00c8d6</color>
+    <color name="cyan2">#d0f6e3</color>
 </resources>

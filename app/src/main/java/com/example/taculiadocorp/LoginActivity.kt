@@ -30,8 +30,16 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        btnIniciarSesion.setOnClickListener(){ loginUser() }
-        checkUser()
+
+            btnIniciarSesion.setOnClickListener() {
+                try {
+                    loginUser()
+                    checkUser()
+                } catch (e: Exception) {
+                    Toast.makeText(this, "Campos Vacios", Toast.LENGTH_SHORT).show()
+                }
+            }
+
     }
 
 
@@ -44,7 +52,7 @@ class LoginActivity : AppCompatActivity() {
                 checkUser()
             }else{
                 task.exception?.let {
-                    Toast.makeText(this,it.message,Toast.LENGTH_LONG).show()
+                    Toast.makeText(this,"Credenciales Incorrectas",Toast.LENGTH_LONG).show()
                 }
             }
         }

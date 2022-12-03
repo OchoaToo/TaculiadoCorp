@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
         var localemail = intent.getStringExtra("email")
         println(localemail)
 
-        imgIniciarSesion = findViewById(R.id.imgIniciarSesion)
         btnLogOut.setOnClickListener{
             auth.signOut()
             val intentLogin: Intent = Intent(this,LoginActivity::class.java)
@@ -84,8 +83,6 @@ class MainActivity : AppCompatActivity() {
 
             recyclerView1.layoutManager = LinearLayoutManager(this)
             recyclerView1.adapter = myAdapter
-
-
         }, { error->
             Toast.makeText(this,"Algo salio mal: ${error}", Toast.LENGTH_LONG).show()
             println("ERROR"+error)
@@ -97,20 +94,4 @@ class MainActivity : AppCompatActivity() {
 
 
 }
-
-
-
-
-
-        /*imgIniciarSesion = findViewById(R.id.imgIniciarSesion)
-        imgIniciarSesion.setOnClickListener {
-            val intentLogin: Intent = Intent(this,LoginActivity::class.java)
-            startActivity(intentLogin)
-            finish()
-        }
-        /*MANDO EL LOGIN PRIMERO Para pruebas para cambiarlo ve al AndroidManifest y cambias el LoginActivyti por MainActivity
-        Primero comprobar si ehay una sesion iniciada si no, mandar el activity login
-        ~okto
-         */
-    }*/
 
