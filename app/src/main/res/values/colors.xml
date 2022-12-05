@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_500">#72c8f1</color>
     <color name="purple_700">#58C1AB</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -12,9 +12,16 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verdetaco">#58C1AB</color>
     <color name="AzulFacebook">#3b5998</color>
+    <color name="cyan_100">#ADFAFF</color>
     <color name="cyan1">#00AEBA</color>
-    <color name="cyan2">#d0f6e3</color>
+    <color name="cyan2">#E2FFF9</color>
 
     <color name="degrade">#A8D8DC</color>
+
+    <color name="verdecheck">#0F6810</color>
+    <color name="rojocheck">#A34B69</color>
+
+    <color name="rojodegradado">#ff428d</color>
+    <color name="naranjadegradado">#ffae46</color>
 
 </resources>

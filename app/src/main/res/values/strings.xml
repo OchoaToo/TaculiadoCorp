@@ -6,6 +6,7 @@
     <string name= "numerodereserva">Reservacion No.</string>
     <string name= "Contacta1">Si no estas registrado, contacta a tu agente de ventas.</string>
     <string name= "Contacta2">Tenemos el paquete perfecto para ti, contacta a tu agente de ventas.</string>
+    <string name= "btn_ubicacion">Ubicacion</string>
 
 
     <string name="title_activity_login">LoginActivity</string>

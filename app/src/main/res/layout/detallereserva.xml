@@ -6,6 +6,100 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_degradado">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar10"
+        android:layout_width="275dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_contraste"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvCheckOutDetalle" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="COSTOS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar10" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="FECHAS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar9" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar9"
+        android:layout_width="275dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_contraste"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvComplementosDetalle" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="HABITACION"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar8" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar6"
+        android:layout_width="275dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_contraste"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstadoReservaDetalle" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar5"
+        android:layout_width="275dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/background_contraste"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/ivHotelDetalle" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline7"
         android:layout_width="wrap_content"
@@ -22,179 +116,231 @@
         app:layout_constraintGuide_begin="45dp"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/ivHotelDetalle"
+        android:layout_width="319dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shadow_cardview"
         app:layout_constraintEnd_toStartOf="@+id/guideline7"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivHotelDetalle"
-            android:layout_width="285dp"
-            android:layout_height="170dp"
-            android:background="@drawable/shadow_cardview"
-            android:layout_marginTop="40dp" />
+    <TextView
+        android:id="@+id/tvTotalReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Total de Reserva: $"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-        <TextView
-            android:id="@+id/tvNumeroReservaDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Numero de Reserva: "
-            android:textColor="#000000"
-            android:textSize="16sp"
+    <TextView
+        android:id="@+id/tvPagosAplicadosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Pagos Aplicados: $"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvMontoFaltante" />
 
-            />
+    <TextView
+        android:id="@+id/tvMontoFaltante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Monto Pendiente: $"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotalReservaDetalle" />
 
-        <TextView
-            android:id="@+id/tvNombreHotelDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Hotel:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNumeroReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Reserva No. "
 
-        <TextView
-            android:id="@+id/tvEstadoReservaDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Estado de Reserva:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar5" />
 
-        <TextView
-            android:id="@+id/tvNombreClienteDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Nombre:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvEstadoReservaDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:fontFamily="@font/asap"
+        android:text="Estado: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroReservaDetalle" />
 
-        <TextView
-            android:id="@+id/tvTelefonoClienteDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Telefono:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNumeroAdultosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Total Adultos:   "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar5" />
 
-        <TextView
-            android:id="@+id/tvHabitacionDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Tipo de Habitacion:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNumeroMenoresDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asap"
+        android:text="Total Menores: "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroAdultosDetalle" />
 
-        <TextView
-            android:id="@+id/tvNumeroHabitacionesDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Numero de Habitaciones:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand"
+        android:text="DATOS"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar6" />
 
-        <TextView
-            android:id="@+id/tvNumeroAdultosDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Total Adultos:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNombreHotelDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/asap"
+        android:text="Hotel:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-        <TextView
-            android:id="@+id/tvNumeroMenoresDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Total Menores:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvNombreClienteDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asap"
+        android:text="Nombre:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreHotelDetalle" />
 
-        <TextView
-            android:id="@+id/tvCheckInDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Check In:  "
-            android:textColor="#FF0000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvTelefonoClienteDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asap"
+        android:text="Telefono:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreClienteDetalle" />
 
-        <TextView
-            android:id="@+id/tvCheckOutDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Check Out:  "
-            android:textColor="#FF0000"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar8"
+        android:layout_width="275dp"
+        android:layout_height="6dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/background_contraste"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefonoClienteDetalle" />
 
-        <TextView
-            android:id="@+id/tvComplementosDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Complementos:  "
-            android:textColor="#000000"
-            android:textSize="16sp" />
+    <TextView
+        android:id="@+id/tvHabitacionDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/asap"
+        android:text="Tipo de Habitacion:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-        <TextView
-            android:id="@+id/tvTotalReservaDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Total de Reserva: $"
-            android:textColor="#FF0000"
-            android:textSize="16sp"
-            android:textStyle="bold|italic" />
+    <TextView
+        android:id="@+id/tvNumeroHabitacionesDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asap"
+        android:text="No. de  Habitaciones:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvHabitacionDetalle" />
 
-        <TextView
-            android:id="@+id/tvPagosAplicadosDetalle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Pagos Aplicados: $"
-            android:textColor="#4CAF50"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvCheckOutDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Check Out:  "
+        android:textColor="@color/rojocheck"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvCheckInDetalle" />
 
-        <TextView
-            android:id="@+id/tvMontoFaltante"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/asap"
-            android:text="Monto Pendiente: $"
-            android:textColor="#FF9800"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvCheckInDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/asap"
+        android:text="Check In:  "
+        android:textColor="@color/verdecheck"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/tvComplementosDetalle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/asap"
+        android:text="Complementos:  "
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroHabitacionesDetalle" />
+
+    <Button
+        android:id="@+id/btn_ubicacion"
+        android:layout_width="137dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/background_contraste"
+        android:text="@string/btn_ubicacion"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/ivHotelDetalle" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
