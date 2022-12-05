@@ -18,5 +18,5 @@ class Model (val idReservas:Int,
              val estadoreserva:String,
              val huespedes:String,
             val usuario:String,
-            val existereserva:String){
+            val googleLink:String){
 }

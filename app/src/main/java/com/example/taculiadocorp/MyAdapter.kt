@@ -5,8 +5,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.cardview.view.*
 
 class MyAdapter (val arrayList: ArrayList<Model>, val context:Context):
@@ -51,6 +53,7 @@ class MyAdapter (val arrayList: ArrayList<Model>, val context:Context):
             var gcheckout:String=model.checkout
             var gestadoreserva:String=model.estadoreserva
             var ghuespedes:String=model.huespedes
+            var gLink:String = model.googleLink
             val intent = Intent(context,DetalleReserva::class.java)
 
             intent.putExtra("iIdReserva",gidReservas.toString())
@@ -70,6 +73,7 @@ class MyAdapter (val arrayList: ArrayList<Model>, val context:Context):
             intent.putExtra("iCheckOut",gcheckout)
             intent.putExtra("iEstadoReserva",gestadoreserva)
             intent.putExtra("iHuespedes",ghuespedes)
+            intent.putExtra("iGLink",gLink)
             context.startActivity(intent)
 
         }

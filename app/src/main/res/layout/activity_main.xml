@@ -103,7 +103,7 @@
         android:id="@+id/btnLogOut"
         android:layout_width="62dp"
         android:layout_height="32dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/custom_button"
 
         android:fontFamily="@font/quicksand"
@@ -150,8 +150,9 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="7dp"
         android:fontFamily="@font/quicksand"
-        android:text="Usuario"
+        android:text="Bienvenido "
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogOut"
         app:layout_constraintEnd_toStartOf="@+id/btnLogOut" />
 
