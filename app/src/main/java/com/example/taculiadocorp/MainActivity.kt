@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
     val arrayList = ArrayList<Model>()
     val displayList = ArrayList<Model>()
     private lateinit var imgIniciarSesion: ImageView
-
+    var existereserva:String? = null
+    var newHotelImage = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -65,15 +66,24 @@ class MainActivity : AppCompatActivity() {
                 var huespedes = jsonObject.get("huespedes").toString()
                 var usuario = jsonObject.get("usuario").toString()
 
+
+                    existereserva = "true"
+                    hotelImagen(nombreHotel)
+
+
                 if(usuario == localemail){
                     arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,
                         numeroHabitaciones,totalAdultos,totalMenores,complementos,totalReserva,pagosAplicados,montoPendiente,
-                        imghotel,checkin,checkout,estadoreserva,huespedes))
+                        newHotelImage,checkin,checkout,estadoreserva,huespedes,usuario, existereserva!!))
 
                     print(nombreHotel)
+                    println("CLIENTE $nombreCliente")
+                    println("EMAIL $localemail")
+                    println("RESERVA $idReservas")
+                }else{
+                    existereserva = "false"
+                    println(existereserva)
                 }
-                println("CLIENTE $nombreCliente")
-                println("EMAIL $localemail")
 
 
             }
@@ -91,7 +101,12 @@ class MainActivity : AppCompatActivity() {
         queue.add(stringRequest)
 
     }
+    private fun hotelImagen(nombre:String?){
 
+        var char = nombre!!.filter{ !it.isWhitespace()}.lowercase()
+        var link:String = "https://lookitmmr.000webhostapp.com/Reservas/Imagenes/$char.png"
+        newHotelImage = link
+    }
 
 }
 

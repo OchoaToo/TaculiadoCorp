@@ -11,12 +11,15 @@ import kotlinx.android.synthetic.main.cardview.view.*
 
 class MyAdapter (val arrayList: ArrayList<Model>, val context:Context):
     RecyclerView.Adapter<MyAdapter.ViewHolder>(){
+    var aux = ""
         class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
-            fun bintItems(model:Model, context: Context){
-                itemView.tvNumeroReserva.append(model.idReservas.toString())
-                itemView.tvCheckIn.append(model.checkin.toString())
-                itemView.tvCheckOut.append(model.checkout.toString())
-                Glide.with(context).load(model.imghotel).into(itemView.ivHotel)
+
+                fun bintItems(model: Model, context: Context) {
+                    itemView.tvNumeroReserva.append(model.idReservas.toString())
+                    itemView.tvCheckIn.append(model.checkin.toString())
+                    itemView.tvCheckOut.append(model.checkout.toString())
+                    Glide.with(context).load(model.imghotel).into(itemView.ivHotel)
+
             }
         }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

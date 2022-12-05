@@ -16,5 +16,7 @@ class Model (val idReservas:Int,
              val checkin:String,
              val checkout:String,
              val estadoreserva:String,
-             val huespedes:String){
+             val huespedes:String,
+            val usuario:String,
+            val existereserva:String){
 }
