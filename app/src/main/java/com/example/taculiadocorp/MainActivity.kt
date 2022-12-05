@@ -73,13 +73,13 @@ class MainActivity : AppCompatActivity() {
 
 
                     existereserva = "true"
-                    hotelImagen(nombreHotel)
+                    //hotelImagen(nombreHotel)
 
 
                 if(usuario == localemail){
                     arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,
                         numeroHabitaciones,totalAdultos,totalMenores,complementos,totalReserva,pagosAplicados,montoPendiente,
-                        newHotelImage,checkin,checkout,estadoreserva,huespedes,usuario, existereserva!!))
+                        imghotel,checkin,checkout,estadoreserva,huespedes,usuario, existereserva!!))
 
                     print(nombreHotel)
                     println("CLIENTE $nombreCliente")
@@ -120,12 +120,12 @@ class MainActivity : AppCompatActivity() {
         queue.add(stringRequest)
 
     }
-    private fun hotelImagen(nombre:String?){
+   /* private fun hotelImagen(nombre:String?){
 
         var char = nombre!!.filter{ !it.isWhitespace()}.lowercase()
         var link:String = "https://lookitmmr.000webhostapp.com/Reservas/Imagenes/$char.png"
         newHotelImage = link
-    }
+    }*/
 
 }
 

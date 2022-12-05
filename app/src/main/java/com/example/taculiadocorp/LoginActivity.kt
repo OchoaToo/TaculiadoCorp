@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
             btnIniciarSesion.setOnClickListener() {
                 try {
                     loginUser()
-                    checkUser()
+                    //checkUser()
                 } catch (e: Exception) {
                     Toast.makeText(this, "Campos Vacios", Toast.LENGTH_SHORT).show()
                 }
@@ -67,7 +67,7 @@ class LoginActivity : AppCompatActivity() {
 
 
           //ESTO SE VE BIEN FEO
-            Toast.makeText(this,"Hola! : ${currentUser.email}",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Hola! : ${currentUser.email}",Toast.LENGTH_SHORT).show()
 
             finish()
         }
