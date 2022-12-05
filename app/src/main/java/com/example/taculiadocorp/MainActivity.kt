@@ -3,8 +3,10 @@ package com.example.taculiadocorp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -14,7 +16,10 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import org.json.JSONArray
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.random.Random
 
+//TODO: HAY UN TOAST QUE APARECE AL INICIAR SESION SE VE FEO Y SER REPITE 2 VECES QUITALO (yo no lo encotnre)
+//TODO: Al iniciar sesion figura como si abriera 2 activitys  (REVISAR)
 
 class MainActivity : AppCompatActivity() {
     private val auth = Firebase.auth
@@ -88,6 +93,20 @@ class MainActivity : AppCompatActivity() {
 
             }
             displayList.addAll(arrayList)
+
+            //ImagenView si hay reservas se vuelve invisible
+            if(arrayList.isNotEmpty()){
+                imgViewupps.setVisibility(View.INVISIBLE)
+                var a: Int = Random.nextInt(3)
+                if(a.equals(1)){
+                    txtViewAgenteDeVentas.text="El viaje sera grandioso"
+                }else if(a.equals(2)){
+                    txtViewAgenteDeVentas.text="En el mar la vida es mas sabrosa"
+                }else{
+                    txtViewAgenteDeVentas.text="Viajar alimenta el alma"
+                }
+
+            }//okto
 
             val myAdapter = MyAdapter(displayList,this)
 

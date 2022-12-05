@@ -2,29 +2,50 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar4"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/custom_button"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewAgenteDeVentas"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/cyan1"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        tools:layout_editor_absoluteX="0dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="71dp" />
+        app:layout_constraintGuide_begin="60dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="40dp" />
+        app:layout_constraintGuide_end="48dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView1"
-        android:layout_width="285dp"
-        android:layout_height="460dp"
+        android:layout_width="320dp"
+        android:layout_height="585dp"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline6"
         app:layout_constraintStart_toStartOf="@+id/guideline5"
@@ -32,48 +53,64 @@
 
     <TextView
         android:id="@+id/txtViewAgenteDeVentas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="."
+        android:layout_width="295dp"
+        android:layout_height="48dp"
+        android:fontFamily="@font/quicksand"
+        android:text="@string/Contacta2"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+        app:layout_constraintHorizontal_bias="0.396"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="6dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="60dp"
         android:background="@color/cyan1"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/custom_button"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
     <TextView
         android:id="@+id/txtvR3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
         android:text="Reservas"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
-        app:layout_constraintStart_toStartOf="@+id/guideline5" />
+        app:layout_constraintStart_toStartOf="@+id/materialToolbar2"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnLogOut"
-        android:layout_width="72dp"
-        android:layout_height="35dp"
-        android:background="@color/white"
-        android:drawableLeft="@drawable/logout"
-        android:fontFamily="@font/quicksand"
+        android:layout_width="62dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/custom_button"
 
+        android:fontFamily="@font/quicksand"
         android:text="@string/cerrarsesion"
         android:textColor="@color/black"
         android:textSize="11dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintEnd_toEndOf="@+id/materialToolbar2"
         app:layout_constraintTop_toTopOf="@+id/txtvR3"
         tools:ignore="TouchTargetSizeCheck" />
 
@@ -94,5 +131,16 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_end="35dp" />
+
+    <ImageView
+        android:id="@+id/imgViewupps"
+        android:layout_width="205dp"
+        android:layout_height="280dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        app:srcCompat="@drawable/tacotriste" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

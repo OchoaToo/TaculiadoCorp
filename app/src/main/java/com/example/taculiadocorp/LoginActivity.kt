@@ -64,6 +64,9 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent(this,MainActivity::class.java)
             intent.putExtra("email",currentUser.email)
             startActivity(intent)
+
+
+          //ESTO SE VE BIEN FEO
             Toast.makeText(this,"Hola! : ${currentUser.email}",Toast.LENGTH_LONG).show()
 
             finish()
