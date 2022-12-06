@@ -10,6 +10,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
+import androidx.core.content.ContextCompat
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.firebase.auth.ktx.auth
@@ -20,11 +23,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import java.util.concurrent.Executor
+import android.provider.Settings
+import android.util.Log
+import android.widget.ImageView
+import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
+import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
+import kotlin.math.log
+
 
 class LoginActivity : AppCompatActivity() {
+    lateinit var info: String
     private var auth = Firebase.auth
     private lateinit var googleSignInClient: GoogleSignInClient
-
+    private lateinit var executor: Executor
+    private lateinit var biometricPrompt: BiometricPrompt
+    private lateinit var promptInfo: BiometricPrompt.PromptInfo
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,14 +47,100 @@ class LoginActivity : AppCompatActivity() {
 
             btnIniciarSesion.setOnClickListener() {
                 try {
-                    loginUser()
+                    checkDeviceHasBiometric()
+
                     //checkUser()
                 } catch (e: Exception) {
                     Toast.makeText(this, "Campos Vacios", Toast.LENGTH_SHORT).show()
                 }
             }
 
+
+
+        executor = ContextCompat.getMainExecutor(this)
+        biometricPrompt = BiometricPrompt(this, executor,
+            object : BiometricPrompt.AuthenticationCallback() {
+                override fun onAuthenticationError(
+                    errorCode: Int,
+                    errString: CharSequence,
+                ) {
+                    super.onAuthenticationError(errorCode, errString)
+                    Toast.makeText(applicationContext,
+                        "Error de Auth: $errString", Toast.LENGTH_SHORT)
+                        .show()
+                }
+
+                override fun onAuthenticationSucceeded(
+                    result: BiometricPrompt.AuthenticationResult,
+                ) {
+                    super.onAuthenticationSucceeded(result)
+                    Toast.makeText(applicationContext,
+                        "Biometricos Aceptados", Toast.LENGTH_SHORT)
+                        .show()
+                    loginUser()
+                }
+
+                override fun onAuthenticationFailed() {
+                    super.onAuthenticationFailed()
+                    Toast.makeText(applicationContext, "Auth fallida",
+                        Toast.LENGTH_SHORT)
+                        .show()
+                }
+            })
+
+        promptInfo = BiometricPrompt.PromptInfo.Builder()
+            .setTitle("LogIn Biometrico")
+            .setSubtitle("Utilice sus datos biometricos para acceder")
+            .setNegativeButtonText("Use su contrasena")
+            .build()
+
+btnIniciarSesion.setOnClickListener(){
+    biometricPrompt.authenticate(promptInfo)
+}
+
+
     }
+
+    fun checkDeviceHasBiometric() {
+        val biometricManager = BiometricManager.from(this)
+        when (biometricManager.canAuthenticate(BIOMETRIC_STRONG or DEVICE_CREDENTIAL)) {
+            BiometricManager.BIOMETRIC_SUCCESS -> {
+                Log.d("MY_APP_TAG", "La app si puede autenticar mediante Biometricos")
+                info = "Si se pueden utilizar biometricos"
+                btnIniciarSesion.isEnabled = true
+                loginUser()
+            }
+            BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> {
+                Log.e("MY_APP_TAG", "No contiene biometricos")
+                info = "Este dispositivo no cuenta con autenticacion biometrica"
+                btnIniciarSesion.isEnabled = false
+
+            }
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> {
+                Log.e("MY_APP_TAG", "Biometricos no funcionan actualmente")
+                info = "Biometricas no disponibles!"
+                btnIniciarSesion.isEnabled = false
+
+            }
+            BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> {
+
+                val enrollIntent = Intent(Settings.ACTION_BIOMETRIC_ENROLL).apply {
+                    putExtra(Settings.EXTRA_BIOMETRIC_AUTHENTICATORS_ALLOWED,
+                        BIOMETRIC_STRONG or DEVICE_CREDENTIAL)
+                }
+                btnIniciarSesion.isEnabled = false
+
+                startActivityForResult(enrollIntent, 100)
+            }
+        }
+
+
+
+
+    }
+
+
+
 
 
     private fun loginUser(){
