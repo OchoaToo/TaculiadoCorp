@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
                 if(usuario == localemail){
                     var user = intent.getStringExtra("email")
-                    txtUsuario.setText("Bienvenido $user !")
+                    txtUsuario.setText(nombreCliente)
                     hotelUbicacion(nombreHotel)
                     println("DEBUG NAME:$nombreHotel LINK:$maplink")
                     arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,

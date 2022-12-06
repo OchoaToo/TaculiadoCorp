@@ -89,9 +89,9 @@ class LoginActivity : AppCompatActivity() {
             })
 
         promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("LogIn Biometrico")
-            .setSubtitle("Utilice sus datos biometricos para acceder")
-            .setNegativeButtonText("Use su contrasena")
+            .setTitle("Introduzca sus datos para proceder.")
+            .setSubtitle("Utilice sus datos biometricos o PIN para acceder")
+            .setNegativeButtonText("Use su PIN")
             .build()
 
 btnIniciarSesion.setOnClickListener(){
