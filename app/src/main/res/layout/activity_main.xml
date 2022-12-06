@@ -94,7 +94,7 @@
         android:layout_marginTop="10dp"
         android:text="Reservas"
         android:textColor="@color/white"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/materialToolbar"
         app:layout_constraintStart_toStartOf="@+id/materialToolbar2"
         app:layout_constraintTop_toTopOf="parent" />
@@ -150,7 +150,6 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="7dp"
         android:fontFamily="@font/quicksand"
-        android:text="Bienvenido "
         android:textColor="@color/black"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/btnLogOut"

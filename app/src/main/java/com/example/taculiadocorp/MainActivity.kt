@@ -1,22 +1,23 @@
 package com.example.taculiadocorp
 
+import android.R.string
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
-import androidx.core.view.isVisible
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import org.json.JSONObject
-import com.android.volley.Request
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import org.json.JSONArray
 import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONArray
+import org.json.JSONObject
 import kotlin.random.Random
+
 
 //TODO: HAY UN TOAST QUE APARECE AL INICIAR SESION SE VE FEO Y SER REPITE 2 VECES QUITALO (yo no lo encotnre)
 //TODO: Al iniciar sesion figura como si abriera 2 activitys  (REVISAR)
@@ -75,10 +76,13 @@ class MainActivity : AppCompatActivity() {
                     existereserva = "true"
                     //hotelImagen(nombreHotel)
 
+                //Nombre de usario cortar
+                val usuarioAux: List<String> = nombreCliente.split(" ")
+
 
                 if(usuario == localemail){
                     var user = intent.getStringExtra("email")
-                    txtUsuario.setText(nombreCliente)
+                    txtUsuario.setText(usuarioAux[0])
                     hotelUbicacion(nombreHotel)
                     println("DEBUG NAME:$nombreHotel LINK:$maplink")
                     arrayList.add(Model(idReservas, nombreHotel, nombreCliente, telefonoCliente, tipoHabitacion,
